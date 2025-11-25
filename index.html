@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Class 10 Premium Store – Shaurya Kumar</title>
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #ffe6f2;
+    margin: 0;
+    padding: 0;
+  }
+  .banner {
+    text-align: center;
+    padding: 24px;
+    background: #fff0f8;
+    border-bottom: 3px solid #ffb3da;
+  }
+  .banner h1 {
+    color: #c2185b;
+    font-size: 32px;
+    margin: 0;
+    font-weight: 800;
+  }
+  .quote {
+    margin-top: 6px;
+    font-size: 18px;
+    color: #d81b60;
+    font-weight: 600;
+  }
+  .product-card {
+    background: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 16px;
+    border: 2px solid #ffb3d9;
+    box-shadow: 0 0 10px rgba(255,105,180,0.25);
+  }
+  .product-card h2 {
+    margin: 0;
+    color: #ad1457;
+  }
+  .btn {
+    background: #ff4da6;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 10px;
+  }
+  .seller-box {
+    background: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 16px;
+    border: 2px solid #ffb3dc;
+  }
+</style>
+</head>
+<body>
+
+<div class="banner">
+  <img src="https://i.imgur.com/sqzJHPx.png" style="max-width:120px;" />
+  <h1>🌸 Class 10 Premium Store 🌸</h1>
+  <p class="quote">"100% in Boards is not luck, it's strategy!"</p>
+</div>
+
+<div class="product-card">
+  <h2>📦 Class 10 Full Premium Course (ZIP)</h2>
+  <p>All subjects • Notes • PYQs • Sample Papers • Complete Boards Preparation Pack</p>
+  <p><strong>Price: ₹299</strong></p>
+  <button class="btn" onclick="checkout()">Buy Now</button>
+</div>
+
+<script>
+function checkout() {
+  document.body.innerHTML = `
+    <div style='padding:20px;text-align:center;'>
+      <h2>Scan & Pay ₹299</h2>
+      <p>UPI: <strong>7518832377@omni</strong></p>
+      <img src='https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=upi://pay?pa=7518832377@omni&pn=Shaurya%20Kumar&am=299' />
+      <p>After payment, click below:</p>
+      <button style='background:#ff4da6;color:white;padding:12px 18px;border-radius:10px;margin-top:10px;' onclick='deliver()'>I Have Paid</button>
+    </div>
+  `;
+}
+
+function deliver() {
+  document.body.innerHTML = `
+    <div style='padding:20px;text-align:center;'>
+      <h1>Thank You for Your Purchase! 🎉</h1>
+      <p>Your download is ready below:</p>
+      <a href='https://drive.google.com/drive/folders/1byb4_O6dp-_WJVFerGjCYImslipRICiq' style='font-size:22px;color:#d81b60;'>DOWNLOAD PREMIUM COURSE</a>
+      <p style='margin-top:20px;'>For any issue, contact: <strong>shauryakumar.kvs@gmail.com</strong></p>
+    </div>
+  `;
+}
+</script>
+
+<div class="seller-box">
+  <h2>👤 About the Seller</h2>
+  <p><strong>Name:</strong> Shaurya Kumar</p>
+  <p><strong>State:</strong> Uttar Pradesh</p>
+  <p><strong>UPI ID:</strong> 7518832377@omni</p>
+  <p><strong>Email:</strong> shauryakumar.kvs@gmail.com</p>
+</div>
+
+</body>
+</html>
